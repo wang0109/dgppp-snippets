@@ -1,0 +1,18 @@
+{
+	"schema_version": "3.0.0",
+	"packages": [
+		{
+			"name": "WeiWangSnippets",
+			"details": "https://github.com/wang0109/dgppp-snippets",
+			"author": ["Wei Wang - big dog peng peng pi"],
+			"releases": [
+				{
+					"sublime_text": "*",
+					"tags": true
+				}
+			]
+		}
+	],
+	"dependencies": [
+	]
+}
