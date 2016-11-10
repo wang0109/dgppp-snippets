@@ -6,6 +6,6 @@ import sublime_plugin
 # Sublime.. example -> ExampleCommond is auto-deduced somehow..
 # It does: Go to file begin and insert hello world...
 class ExampleCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
-	self.view.insert(edit, 0, "Hello, World!")
 
+    def run(self, edit):
+        self.view.insert(edit, 0, "Hello, World!")
