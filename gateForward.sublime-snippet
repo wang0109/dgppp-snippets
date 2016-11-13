@@ -1,0 +1,37 @@
+<snippet>
+    <content><![CDATA[
+return function (req, res) {
+    if (!req.body) {
+        res.status(400).json({ error: 'Empty payload' });
+        return;
+    }
+    var postUrl = dataDomain + '${1:dataUrl}';
+    var postOptions = {
+        method: 'post',
+        body: req.body,
+        json: true,
+        url: postUrl
+    }
+    asyncRequest(postOptions, function (err, response, body) {
+        if (err) {
+            res.status(500).json({ error: err });
+            return;
+        }
+
+        if (response.statusCode !== 200) {
+            res.status(response.statusCode).json({
+                error: 'check error detail from backend',
+                detail: response.body.error
+            });
+            return;
+        }
+
+        res.json(body);
+    });
+};
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>gateForwardToDataFunction</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>
