@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+Notify.alert(
+    '${1}', { status: 'danger' }
+);
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ngnotify</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+function(result) {
+    console.log("db result:", result);
+    // res.status(200).json();
+}, function(rejectedPromiseError){
+    res.status(500).json({
+        error: {
+            source: "db",
+            yousend: req.body,
+            dbsays: rejectedPromiseError
+        }
+    })
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>dbfunc</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>
